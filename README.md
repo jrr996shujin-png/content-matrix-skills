@@ -6,7 +6,7 @@ You write content once. AI adapts it to each platform's native style, tone, and 
 
 This skill pack gives your OpenClaw agent the ability to:
 
-* ✍️ **Generate** platform-native versions of any content for 4 platforms simultaneously
+* ✍️ **Generate** platform-native versions of any content for 3 platforms (X, LinkedIn, Reddit)
 * 🚀 **Publish** directly to X (Twitter), LinkedIn, and Reddit without leaving your terminal
 * 🦀 **Cultivate** Reddit karma automatically with anti-shadowban safeguards (for new accounts)
 * 📊 **Track** post engagement across all platforms
@@ -15,7 +15,7 @@ This skill pack gives your OpenClaw agent the ability to:
 
 | Skill | What It Does | Trigger Examples |
 | --- | --- | --- |
-| [`content-matrix`](#content-matrix) | Transform one piece of content into platform-native versions for Xiaohongshu, Reddit, X, and LinkedIn | *"Distribute this content to all platforms"* *"Generate a LinkedIn version of this"* |
+| [`content-matrix`](#content-matrix) | Transform one piece of content into platform-native versions for X, LinkedIn, and Reddit | *"Distribute this content to all platforms"* *"Generate a LinkedIn version of this"* |
 | [`reddit-cultivate`](#reddit-cultivate) | Auto-grow Reddit karma by commenting on rising posts with AI-generated, value-first responses | *"Help me grow my Reddit account"* *"Comment on r/indiehackers posts"* |
 
 ### How They Work Together
@@ -75,7 +75,7 @@ export LINKEDIN_ACCESS_TOKEN='your-token-here'
 
 Requires a [LinkedIn Developer App](https://www.linkedin.com/developers/apps) with "Share on LinkedIn" (w_member_social) permission. Token expires every 60 days.
 
-#### X / Twitter (Paid — ~$0.01 per tweet)
+#### X / Twitter (Prepaid — minimum $5, ~$0.01 per tweet)
 
 ```bash
 export TWITTER_API_KEY='...'
@@ -85,9 +85,9 @@ export TWITTER_ACCESS_SECRET='...'
 pip install tweepy
 ```
 
-Requires a [Twitter Developer Account](https://developer.twitter.com) ($100/month Basic tier). Cost per tweet is negligible (~$0.01), but the monthly subscription is the real cost. If you only need to post occasionally, the Free tier allows write-only access for 1 app.
+Requires a [Twitter Developer Account](https://developer.twitter.com). Uses a prepaid credit system — minimum top-up is $5, which is enough for hundreds of tweets (~$0.01 each). Credits never expire.
 
-> **💡 Tip:** X Free tier gives you 1,500 tweets/month for $0 — enough for most indie hackers. You only pay if you need read access or higher volume.
+> **💡 Tip:** $5 is all you need to get started. One top-up lasts months for typical indie hacker posting frequency.
 
 #### Reddit (Free — Browser Automation)
 
@@ -139,7 +139,7 @@ python3 ~/.openclaw/skills/content-matrix/skills/publishers/reddit_publisher.py 
 
 ### `content-matrix`
 
-**What it does:** Takes one piece of "mother content" and generates platform-native versions for up to 4 platforms simultaneously. Each version follows platform-specific rules for tone, format, length, and audience expectations.
+**What it does:** Takes one piece of "mother content" and generates platform-native versions for 3 platforms simultaneously. Each version follows platform-specific rules for tone, format, length, and audience expectations.
 
 **Why not just use ChatGPT?** Because ChatGPT requires you to ask one platform at a time, re-describe your style every time, and has no built-in knowledge of platform-specific rules. Content Matrix generates all versions at once with a rules engine and style learning.
 
@@ -147,10 +147,9 @@ python3 ~/.openclaw/skills/content-matrix/skills/publishers/reddit_publisher.py 
 
 | Platform | Language | Auto-Publish | Key Adaptations |
 | --- | --- | --- | --- |
-| X (Twitter) | English | ✅ via API | Single tweet (≤280 chars) + Thread (5-8 tweets), opinionated tone |
-| LinkedIn | English | ✅ via API | Professional narrative, first 3 lines hook, links in comments |
-| Reddit | English | ✅ via Chrome | Authentic storytelling, admit failures, suggest subreddit + flair |
-| Xiaohongshu (小红书) | Chinese | ❌ manual | Strong title, emoji sections, image required, tutorial format |
+| X (Twitter) | English | ✅ via API ($5 prepaid) | Single tweet (≤280 chars) + Thread (5-8 tweets), opinionated tone |
+| LinkedIn | English | ✅ via API (free) | Professional narrative, first 3 lines hook, links in comments |
+| Reddit | English | ✅ via Chrome (free) | Authentic storytelling, admit failures, suggest subreddit + flair |
 
 **Features:**
 - **Platform Rules Engine** — not just translation, each platform has a full rule set (`configs/platform_rules.json`)
@@ -229,11 +228,10 @@ python3 scripts/reddit_cultivate.py --check-shadowban
 | Platform | API Cost | Setup Difficulty | Auto-Publish |
 | --- | --- | --- | --- |
 | **LinkedIn** | Free | Medium (OAuth setup) | ✅ Yes |
-| **X (Twitter)** | ~$0.01/tweet (Free tier: 1,500 tweets/mo) | Easy (API keys) | ✅ Yes |
+| **X (Twitter)** | Prepaid min $5 (~$0.01/tweet) | Easy (API keys) | ✅ Yes |
 | **Reddit** | Free | Easy (just login in Chrome) | ✅ Yes (macOS) |
-| **Xiaohongshu** | Free | N/A | ❌ Manual only |
 
-> **Total cost for indie hackers:** $0/month if you use X Free tier. The content generation itself costs ~$0.01 per run with gpt-4o-mini, or $0 with Ollama local models.
+> **Total cost for indie hackers:** $5 one-time top-up for X, everything else free. The content generation itself costs ~$0.01 per run with gpt-4o-mini, or $0 with Ollama local models.
 
 ---
 
