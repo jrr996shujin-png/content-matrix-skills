@@ -1,0 +1,139 @@
+{
+  "xiaohongshu": {
+    "name": "小红书 (Xiaohongshu / RedNote)",
+    "language": "zh-CN",
+    "max_length": 1000,
+    "requires_image": true,
+    "content_rules": {
+      "tone": "亲切、实战派、口语化、段落短",
+      "structure": "强标题 + 正文分段 + emoji点缀 + 话题标签",
+      "do": [
+        "用第一人称'我'讲述真实体验",
+        "标题要有数字和情绪钩子（如：'踩了3个坑才搞明白'）",
+        "多用emoji分段，提高可读性",
+        "加入对比（before/after）",
+        "结尾加互动引导（'你们试过吗？'）",
+        "加3-5个相关话题标签",
+        "重实用、重教程、重案例"
+      ],
+      "dont": [
+        "不要用创业腔或融资腔",
+        "不要长段落（每段不超过3行）",
+        "不要纯理论，要有实操截图建议",
+        "不要用英文术语，要翻译成大白话",
+        "不要硬广，要软植入"
+      ],
+      "format_template": "【标题】\\n\\n正文（分段+emoji）\\n\\n#话题1 #话题2 #话题3",
+      "image_suggestion": "需要封面图：建议文字卡片风格，突出核心数字或对比，配色明亮"
+    }
+  },
+  "reddit": {
+    "name": "Reddit",
+    "language": "en",
+    "max_length": 10000,
+    "requires_image": false,
+    "content_rules": {
+      "tone": "真诚、反思型、愿意暴露失败和困惑",
+      "structure": "提问/经验分享标题 + 背景故事 + 遇到的问题 + 尝试的方案 + 结果 + 请求反馈",
+      "do": [
+        "讲真实故事，包括失败和挫折",
+        "表达你的困惑和不确定",
+        "用'I tried X, but then Y happened'的叙事结构",
+        "主动请教社区意见",
+        "提供具体数据和细节",
+        "适当自嘲，展示脆弱面",
+        "回复每一条有价值的评论"
+      ],
+      "dont": [
+        "不要全篇说好话（社区会怀疑是广告）",
+        "不要用营销语言（如'game-changer', 'revolutionary'）",
+        "不要一上来就推产品",
+        "不要忽略subreddit的具体规则",
+        "不要用表情符号（Reddit文化不喜欢）"
+      ],
+      "subreddit_matching": {
+        "AI/技术": [
+          "r/artificial",
+          "r/MachineLearning",
+          "r/LocalLLaMA"
+        ],
+        "创业/SaaS": [
+          "r/SaaS",
+          "r/Entrepreneur",
+          "r/startups",
+          "r/indiehackers"
+        ],
+        "营销/增长": [
+          "r/marketing",
+          "r/growthacking",
+          "r/digital_marketing"
+        ],
+        "生产力": [
+          "r/productivity",
+          "r/Automate"
+        ],
+        "通用讨论": [
+          "r/technology",
+          "r/AskReddit"
+        ]
+      },
+      "format_template": "Title: [经验/提问式标题]\\n\\nHey everyone,\\n\\n[背景故事]\\n\\n[问题/发现]\\n\\n[你的尝试]\\n\\n[结果+反思]\\n\\nWould love to hear your thoughts."
+    }
+  },
+  "x": {
+    "name": "X (Twitter)",
+    "language": "en",
+    "max_length_tweet": 280,
+    "max_length_thread": 2800,
+    "requires_image": false,
+    "content_rules": {
+      "tone": "观点鲜明、逻辑清晰、高密度表达、有锋利感",
+      "structure_tweet": "一条独立推文，280字符以内，开头就是观点",
+      "structure_thread": "Thread: 第一条是钩子（引发好奇）→ 中间是展开（每条一个点）→ 最后是总结+CTA",
+      "do": [
+        "开头直接抛出最有冲击力的观点或数据",
+        "Build in public: 分享真实进展和数据",
+        "每条Thread推文都要有独立价值（可以被单独转发）",
+        "用数字说话（'tested 5 tools, only 1 worked'）",
+        "紧跟时事热点",
+        "Thread第一条要让人想看下一条",
+        "最后一条加CTA（follow for more / what do you think?）"
+      ],
+      "dont": [
+        "不要啰嗦，每个字都要有信息量",
+        "不要用hashtag过多（1-2个就够）",
+        "不要在Thread每条都用emoji",
+        "不要写成博客摘要，要有推特原生感"
+      ],
+      "format_template_tweet": "[一句话观点/洞察]",
+      "format_template_thread": "🧵 [钩子标题]\\n\\n1/ [展开]\\n2/ [展开]\\n...\\nn/ [总结+CTA]"
+    }
+  },
+  "linkedin": {
+    "name": "LinkedIn",
+    "language": "en",
+    "max_length": 3000,
+    "requires_image": false,
+    "content_rules": {
+      "tone": "专业叙事、有格局感、不炫技、温和但有深度",
+      "structure": "钩子开头（前3行决定是否展开）→ 故事/经验 → 洞察/教训 → 行动号召",
+      "do": [
+        "前3行必须有吸引力（LinkedIn会折叠后面的内容）",
+        "讲团队故事、战略思考、行业洞察",
+        "分享经验教训，不只是成功",
+        "适度用换行增加可读性",
+        "结尾问一个开放问题引发评论",
+        "适合B2B叙事：合作、招人、行业趋势",
+        "展示思考过程而非结论"
+      ],
+      "dont": [
+        "不要太技术化（LinkedIn受众偏商业）",
+        "不要写成简历或公司PR稿",
+        "不要用'Thrilled to announce'这类烂梗",
+        "不要贴外链在正文里（算法会降权）",
+        "不要一段话写到底，要分行"
+      ],
+      "format_template": "[钩子：一句话引发好奇]\\n\\n[故事/背景]\\n\\n[核心洞察]\\n\\n[教训/行动建议]\\n\\n[开放问题]\\n\\n---\\n[可选：外链放评论区]"
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "x": {
+    "best_times": [
+      "8:00-9:00 EST",
+      "12:00-13:00 EST",
+      "17:00-18:00 EST"
+    ],
+    "best_days": [
+      "Tuesday",
+      "Wednesday",
+      "Thursday"
+    ],
+    "publish_order": 1,
+    "reason": "X适合第一时间发，测试内容热度和反馈",
+    "notes": "如果是Thread建议早上发，单条推文全天都可以"
+  },
+  "reddit": {
+    "best_times": [
+      "8:00-10:00 EST"
+    ],
+    "best_days": [
+      "Monday",
+      "Tuesday",
+      "Wednesday"
+    ],
+    "publish_order": 2,
+    "reason": "等X的初步反馈后，带着数据和讨论去Reddit更有说服力",
+    "notes": "发帖后30分钟内必须在线回复评论，Reddit算法看早期互动"
+  },
+  "linkedin": {
+    "best_times": [
+      "7:30-8:30 EST",
+      "12:00 EST"
+    ],
+    "best_days": [
+      "Tuesday",
+      "Wednesday",
+      "Thursday"
+    ],
+    "publish_order": 3,
+    "reason": "LinkedIn适合发更成熟、更有深度的版本，整合前面平台的反馈",
+    "notes": "外链放评论区第一条，不要放正文"
+  },
+  "xiaohongshu": {
+    "best_times": [
+      "12:00-13:00 CST",
+      "20:00-22:00 CST"
+    ],
+    "best_days": [
+      "Friday",
+      "Saturday",
+      "Sunday"
+    ],
+    "publish_order": 4,
+    "reason": "小红书用户周末活跃度更高，且中文内容需要单独打磨",
+    "notes": "必须配图，建议用Canva或截图工具做文字卡片封面"
+  }
+}

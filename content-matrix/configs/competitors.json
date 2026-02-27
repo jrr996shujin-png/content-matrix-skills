@@ -1,0 +1,55 @@
+{
+  "_instructions": "在这里配置你要监控的竞品。每个竞品可以监控多个页面类型。",
+
+  "competitors": [
+    {
+      "name": "Manus",
+      "id": "manus",
+      "urls": {
+        "landing_page": "https://manus.im",
+        "changelog": "https://manus.im/changelog",
+        "pricing": "https://manus.im/pricing",
+        "blog": "https://manus.im/blog"
+      },
+      "app_store": {
+        "ios": "",
+        "android": ""
+      },
+      "github": "",
+      "notes": "主要竞品，关注Agent Skills和SkillsMP的更新"
+    },
+    {
+      "name": "OpenClaw",
+      "id": "openclaw",
+      "urls": {
+        "landing_page": "https://openclaw.com",
+        "docs": "https://docs.openclaw.com",
+        "changelog": ""
+      },
+      "app_store": {},
+      "github": "https://github.com/openclaw",
+      "notes": "开源agent平台，关注社区生态发展"
+    },
+    {
+      "name": "Cursor",
+      "id": "cursor",
+      "urls": {
+        "landing_page": "https://cursor.com",
+        "changelog": "https://cursor.com/changelog",
+        "pricing": "https://cursor.com/pricing",
+        "blog": "https://cursor.com/blog"
+      },
+      "app_store": {},
+      "github": "",
+      "notes": "AI编程工具，关注功能迭代速度和定价变化"
+    }
+  ],
+
+  "monitor_settings": {
+    "check_interval_hours": 24,
+    "snapshot_dir": "data/snapshots",
+    "reports_dir": "data/reports",
+    "max_snapshots_per_url": 30,
+    "diff_threshold_chars": 50
+  }
+}

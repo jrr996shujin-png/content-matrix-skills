@@ -1,0 +1,60 @@
+{
+  "_instructions": "这是你的个人风格配置文件。请根据自己的实际情况修改以下内容。AI会学习你的语气和表达习惯。",
+  "author": {
+    "name": "你的名字",
+    "role": "你的职位/身份（如：独立开发者、营销负责人、创始人）",
+    "industry": "你所在的行业（如：AI SaaS、电商、教育科技）",
+    "target_audience": "你的目标受众（如：SaaS创始人、增长黑客、独立开发者）"
+  },
+  "voice": {
+    "personality": "描述你的表达风格（如：务实、犀利、幽默、技术派、故事型）",
+    "values": "你想传达的核心价值观（如：实事求是、数据说话、反对虚假繁荣）",
+    "language_preference": {
+      "primary": "zh-CN",
+      "secondary": "en",
+      "notes": "小红书用中文，其他平台用英文。可根据需要调整。"
+    }
+  },
+  "platform_personas": {
+    "xiaohongshu": {
+      "bio": "你在小红书上的人设定位",
+      "tone_override": "如果你在小红书上的语气跟默认不同，在这里覆盖",
+      "sample_posts": [
+        "把你写过的1-3条小红书帖子贴在这里，AI会学习你的风格",
+        "第二条示例帖子",
+        "第三条示例帖子"
+      ]
+    },
+    "reddit": {
+      "username": "你的Reddit用户名",
+      "active_subreddits": [
+        "r/SaaS",
+        "r/Entrepreneur"
+      ],
+      "tone_override": "",
+      "sample_posts": [
+        "贴1-3条你在Reddit上写过的帖子或评论"
+      ]
+    },
+    "x": {
+      "handle": "@your_handle",
+      "tone_override": "",
+      "sample_posts": [
+        "贴几条你发过的典型推文",
+        "第二条示例推文"
+      ]
+    },
+    "linkedin": {
+      "profile_url": "你的LinkedIn链接",
+      "tone_override": "",
+      "sample_posts": [
+        "贴1-2篇你在LinkedIn上写过的帖子"
+      ]
+    }
+  },
+  "content_preferences": {
+    "always_include": "每篇内容都要包含的元素（如：数据、个人经历、行动建议）",
+    "never_include": "绝对不要出现的内容（如：竞品攻击、虚假数据、夸大宣传）",
+    "cta_style": "你偏好的行动号召方式（如：提问式、邀请讨论式、引导关注式）"
+  }
+}

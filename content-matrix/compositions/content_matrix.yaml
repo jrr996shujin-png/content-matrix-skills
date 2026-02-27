@@ -1,0 +1,25 @@
+# ═══════════════════════════════════════════════
+# Composition: 跨平台内容分发 (Content Matrix)
+# ═══════════════════════════════════════════════
+# 一个母体内容 → 5个平台的原生版本 + 发布计划
+#
+# Usage:
+#   python3 skills/content_adapter.py "你的母体内容"
+#   python3 skills/content_adapter.py "你的母体内容" --plan
+#   python3 skills/content_adapter.py -f content.txt --platforms x,reddit,linkedin
+#
+# 配置文件:
+#   configs/platform_rules.json   - 各平台内容规则
+#   configs/publish_timing.json   - 发布时间建议
+#   configs/my_style.json         - 你的个人风格（请自行修改）
+
+name: 跨平台内容分发 (Content Matrix)
+description: 一键将母体内容适配到小红书、Reddit、X、LinkedIn、
+
+platforms:
+  - xiaohongshu
+  - reddit
+  - x
+  - linkedin
+
+default_model: gpt-4o-mini
